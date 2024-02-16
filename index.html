@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kanon's Room</title>
+	<link rel="icon" href="public/images/white-cat.png">
+	<link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-logo">
+			<span>Kanon's Room</span>Kanon's Room
+		</div>
+		<div class="header-menu">
+			<a href="">
+				<img src="./public/images/white-cat.png" alt="cat-image">
+				<div class="menu-icon">
+					<div class="top"></div>
+					<div class="middle"></div>
+					<div class="bottom"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="fv"></div>
+	<div class="main">
+		<div class="top-image">
+			<picture>
+				<source srcset="./public/images/top-sp.png" media="(max-width: 670px)">
+				<source srcset="./public/images/top-tb.png" media="(max-width: 1000px)">
+				<img class="pc" src="./public/images/top-pc.png" alt="">
+			</picture>
+		</div>
+		<div class="main-contents">
+			<div class="about-wrapper">
+				<div class="section-title">
+					About
+					<img src="public/images/pink-black-cat.png" alt="cat-image">
+				</div>
+				<div class="about-contents">
+					<div class="icon-area">
+						<img src="public/images/white-cat.png" alt="profile-icon">
+					</div>
+					<div class="profile-area">
+						<div class="name">
+							Kanon Nakajima
+						</div>
+						<div class="bio">
+							プログラミングとお絵かきと猫が好きです。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="works-wrapper">
+				<div class="section-title">
+					Works
+					<img src="public/images/black-cat.png" alt="cat-image">
+				</div>
+				<div class="works-contents">
+					<div class="works-item">
+						<img src="./public/images/works-image.png" alt="">
+						<div class="item-name">Item1</div>
+					</div>
+					<div class="works-item">
+						<img src="./public/images/works-image.png" alt="">
+						<div class="item-name">Item2</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-wrapper">
+				<div class="section-title">
+					Contact
+					<img src="public/images/pink-white-cat.png" alt="cat-image">
+				</div>
+				<div class="contact-contents">
+					<div class="contact-icons">
+						<a href="">
+							<img src="" alt="pixiv-icon">
+						</a>
+						<a href="">
+							<img src="" alt="x-icon">
+						</a>
+					</div>
+					<div class="mail">
+						<img src="" alt="mail-icon">
+						sample@gmail.com
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<small class="copy-right">&copy; 2024 kanon</small>
+	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			window.addEventListener('scroll', () => {
+				let firstView = document.querySelector('.fv');
+				let header = document.querySelector('.header');
+				if (firstView.offsetHeight < window.scrollY) {
+					header.classList.add('transform');
+					header.classList.remove('white');
+
+				} else {
+					header.classList.add('white');
+					header.classList.remove('transform');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
