@@ -12,6 +12,14 @@ $base-color: #fefdf9;
 	color: $black;
 }
 
+a {
+	text-decoration: none;
+}
+
+img, source {
+	display: block;
+}
+
 body {
 	margin: 0;
 	min-height: 100vh;
@@ -87,7 +95,6 @@ body {
 	height: 5em;
 }
 
-
 .main {
 	flex: 1;
 	background-color: $base-color;
@@ -95,7 +102,6 @@ body {
 
 .top-image {
 	& img, source {
-		display: block;
 		width: 100%;
 		padding: 0;
 	}
@@ -107,8 +113,6 @@ body {
 	background-color: $white;
 	border: 1px solid rgba($black, 0.34);
 	border-radius: 0.68rem;
-	justify-content: center;
-	align-items: center;
 	padding:0 10% 1.2em 10%;
 	margin: 8rem auto;
 	font-size: 3rem;
@@ -136,14 +140,58 @@ body {
 
 .about-wrapper {
 	@include wrapper('about-contents');
+	& .about-contents {
+		display: flex;
+		justify-content: center;
+		& .icon-area {
+			margin-right: 3%;
+		}
+		& .profile-area {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			& .name {
+				margin-bottom: 0.4em;
+				font-size: 1.8em;
+			}
+		}
+	}
 }
 
 .works-wrapper {
 	@include wrapper('works-contents');
+	& .works-contents {
+		display: flex;
+		justify-content: center;
+		& .works-item {
+			margin: 3%;
+			margin-bottom: calc(3% + 0.8em);
+			text-align: center;
+			& .item-name {
+				position: sticky;
+				margin-top: -3em;
+			}
+		}
+	}
 }
 
 .contact-wrapper {
 	@include wrapper('contact-contents');
+	& .contact-icons, .mail {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	& .contact-icons img {
+		opacity: 0.96;
+		width: 2em;
+		margin: 1em;
+	}
+	& .mail img {
+		width: 1.2em;
+		margin: 0.6em;
+		opacity: 0.76;
+	}
 }
 
 footer {

@@ -4,6 +4,14 @@
   color: #6b1d1e;
 }
 
+a {
+  text-decoration: none;
+}
+
+img, source {
+  display: block;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -88,7 +96,6 @@ body {
   margin-bottom: 8rem;
 }
 .top-image img, .top-image source {
-  display: block;
   width: 100%;
   padding: 0;
 }
@@ -101,8 +108,6 @@ body {
   background-color: #ffffff;
   border: 1px solid rgba(107, 29, 30, 0.34);
   border-radius: 0.68rem;
-  justify-content: center;
-  align-items: center;
   padding: 0 10% 1.2em 10%;
   margin: 8rem auto;
   font-size: 3rem;
@@ -123,13 +128,27 @@ body {
 .about-wrapper .about-contents {
   font-size: 1rem;
 }
+.about-wrapper .about-contents {
+  display: flex;
+  justify-content: center;
+}
+.about-wrapper .about-contents .icon-area {
+  margin-right: 3%;
+}
+.about-wrapper .about-contents .profile-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-wrapper .about-contents .profile-area .name {
+  margin-bottom: 0.4em;
+  font-size: 1.8em;
+}
 
 .works-wrapper {
   background-color: #ffffff;
   border: 1px solid rgba(107, 29, 30, 0.34);
   border-radius: 0.68rem;
-  justify-content: center;
-  align-items: center;
   padding: 0 10% 1.2em 10%;
   margin: 8rem auto;
   font-size: 3rem;
@@ -150,13 +169,24 @@ body {
 .works-wrapper .works-contents {
   font-size: 1rem;
 }
+.works-wrapper .works-contents {
+  display: flex;
+  justify-content: center;
+}
+.works-wrapper .works-contents .works-item {
+  margin: 3%;
+  margin-bottom: calc(3% + 0.8em);
+  text-align: center;
+}
+.works-wrapper .works-contents .works-item .item-name {
+  position: sticky;
+  margin-top: -3em;
+}
 
 .contact-wrapper {
   background-color: #ffffff;
   border: 1px solid rgba(107, 29, 30, 0.34);
   border-radius: 0.68rem;
-  justify-content: center;
-  align-items: center;
   padding: 0 10% 1.2em 10%;
   margin: 8rem auto;
   font-size: 3rem;
@@ -176,6 +206,21 @@ body {
 }
 .contact-wrapper .contact-contents {
   font-size: 1rem;
+}
+.contact-wrapper .contact-icons, .contact-wrapper .mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrapper .contact-icons img {
+  opacity: 0.96;
+  width: 2em;
+  margin: 1em;
+}
+.contact-wrapper .mail img {
+  width: 1.2em;
+  margin: 0.6em;
+  opacity: 0.76;
 }
 
 footer {
