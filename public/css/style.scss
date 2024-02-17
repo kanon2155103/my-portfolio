@@ -1,10 +1,5 @@
-$sample-color1: #f7f2b4;
-$sample-color2: #bdf7f1;
-$sample-color3: #ceccf3;
-
 $white: #ffffff;
 $black: #6b1d1e;
-
 $base-color: #fefdf9;
 
 * {
@@ -30,6 +25,7 @@ body {
 .white {
 	background-color: $white;
 }
+
 .transform {
 	background-color: rgba($white, 0.65);
 }
@@ -43,12 +39,12 @@ body {
 	position: fixed;
 	top: 0;
 	z-index: 10;
-	transition: all 1.0s ease-in; /* 背景色と高さをじんわり変更 */
+	transition: all 1.0s ease-in;
 	& .header-logo {
 		letter-spacing: 0.08em;
 		font-size: 1.8em;
 		float: left;
-		-webkit-text-stroke: 0.05em $black;
+		-webkit-text-stroke: 0.06em $black;
 		& span {
 			-webkit-text-stroke: 0;
 			position: absolute;
@@ -164,7 +160,7 @@ body {
 		display: flex;
 		justify-content: center;
 		& .works-item {
-			margin: 3%;
+			margin: 0 3%;
 			margin-bottom: calc(3% + 0.8em);
 			text-align: center;
 			& .item-name {
@@ -203,5 +199,36 @@ footer {
 		line-height: 5rem;
 		font-weight: 600;
 		color: rgba($black, 0.7);
+	}
+}
+
+@media all and (max-width: 670px) {
+	.header {
+		padding: 0;
+		& .header-logo {
+			margin-left: 6.4%;
+		}
+		& .header-menu {
+			display: none;
+		}
+	}
+	.transform {
+		background-color: rgba($white, 0.7);
+	}
+	.about-contents, .works-contents, .contact-contents {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		& * {
+			margin: 3% 0;
+		}
+	}
+	.icon-area {
+		margin: 3%;
+	}
+	.profile-area {
+		& .bio {
+			font-size: 3.1vmin;
+		}
 	}
 }
