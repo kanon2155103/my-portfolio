@@ -41,7 +41,7 @@ body {
   letter-spacing: 0.08em;
   font-size: 1.8em;
   float: left;
-  -webkit-text-stroke: 0.06em #6b1d1e;
+  -webkit-text-stroke: 0.05em #6b1d1e;
 }
 .header .header-logo span {
   -webkit-text-stroke: 0;
@@ -244,9 +244,6 @@ footer .copy-right {
   .header .header-menu {
     display: none;
   }
-  .transform {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
   .about-contents, .works-contents, .contact-contents {
     flex-direction: column;
     align-items: center;
@@ -260,5 +257,8 @@ footer .copy-right {
   }
   .profile-area .bio {
     font-size: 3.1vmin;
+  }
+  .works-item img {
+    margin: 6% 0;
   }
 }/*# sourceMappingURL=style.css.map */
