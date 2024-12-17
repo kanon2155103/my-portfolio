@@ -61,6 +61,7 @@ body {
 			margin: 1.2em 0;
 			display: flex;
 			float: right;
+
 			& img {
 				width: 64%;
 				padding: 4%;
@@ -75,6 +76,7 @@ body {
 				border-radius: 100px;
 				background-color: $white;
 				border: 1px solid rgba($black, 0.6);
+				transition: 0.32s;
 			}
 			& .top {
 				margin-top: 20%;
@@ -84,6 +86,10 @@ body {
 				margin-top: 33%;
 				margin-bottom: 20%;
 			}
+		}
+		&:hover .menu-icon div {
+			background-color: rgba($black, 0.2);
+			border: 1px solid rgba($black, 0.68);
 		}
 	}
 }
@@ -174,6 +180,7 @@ body {
 				border: 2px solid rgba($pink, 0.8);
 				border-radius: 50%;
 				position: relative;
+				transition: 0.32s;
 				& .name-area {
 					position: absolute;
 					bottom: -4%;
@@ -194,6 +201,10 @@ body {
 			& .item-name {
 				position: sticky;
 				margin: 2em 0 6% 0;
+			}
+			&:hover .item-area {
+				background-color: rgba($pink, 0.8);
+				border: 2px solid rgba($pink, 1);
 			}
 		}
 	}

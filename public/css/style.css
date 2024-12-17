@@ -71,6 +71,7 @@ body {
   border-radius: 100px;
   background-color: #ffffff;
   border: 1px solid rgba(107, 29, 30, 0.6);
+  transition: 0.32s;
 }
 .header .header-menu .menu-icon .top {
   margin-top: 20%;
@@ -79,6 +80,10 @@ body {
 .header .header-menu .menu-icon .bottom {
   margin-top: 33%;
   margin-bottom: 20%;
+}
+.header .header-menu:hover .menu-icon div {
+  background-color: rgba(107, 29, 30, 0.2);
+  border: 1px solid rgba(107, 29, 30, 0.68);
 }
 
 .fv {
@@ -187,6 +192,7 @@ body {
   border: 2px solid rgba(250, 215, 216, 0.8);
   border-radius: 50%;
   position: relative;
+  transition: 0.32s;
 }
 .works-wrapper .works-contents .works-item .item-area .name-area {
   position: absolute;
@@ -207,6 +213,10 @@ body {
 .works-wrapper .works-contents .works-item .item-name {
   position: sticky;
   margin: 2em 0 6% 0;
+}
+.works-wrapper .works-contents .works-item:hover .item-area {
+  background-color: rgba(250, 215, 216, 0.8);
+  border: 2px solid #fad7d8;
 }
 
 .contact-wrapper {
