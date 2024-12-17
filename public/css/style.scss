@@ -158,14 +158,25 @@ body {
 	@include wrapper('works-contents');
 	& .works-contents {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		& .works-item {
 			margin: 0 3%;
 			margin-bottom: calc(3% + 0.8em);
 			text-align: center;
+			display: flex;
+			flex-flow: column;
+			& .item-image {
+				position: sticky;
+				text-align: center;
+				width: 4rem;
+				height: 4rem;
+				margin: 0 auto;
+				margin-top: -9em;
+			}
 			& .item-name {
 				position: sticky;
-				margin-top: -3em;
+				margin-top: 2em;
 			}
 		}
 	}
@@ -227,8 +238,5 @@ footer {
 		& .bio {
 			font-size: 3.1vmin;
 		}
-	}
-	.works-item img {
-		margin: 6% 0;
 	}
 }

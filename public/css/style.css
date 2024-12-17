@@ -170,16 +170,27 @@ body {
 }
 .works-wrapper .works-contents {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .works-wrapper .works-contents .works-item {
   margin: 0 3%;
   margin-bottom: calc(3% + 0.8em);
   text-align: center;
+  display: flex;
+  flex-flow: column;
+}
+.works-wrapper .works-contents .works-item .item-image {
+  position: sticky;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  margin-top: -9em;
 }
 .works-wrapper .works-contents .works-item .item-name {
   position: sticky;
-  margin-top: -3em;
+  margin-top: 2em;
 }
 
 .contact-wrapper {
@@ -257,8 +268,5 @@ footer .copy-right {
   }
   .profile-area .bio {
     font-size: 3.1vmin;
-  }
-  .works-item img {
-    margin: 6% 0;
   }
 }/*# sourceMappingURL=style.css.map */
